@@ -22,9 +22,9 @@
 #### Quick Refreshers
 
 - [Scripts](https://github.com/mohanvamsi06/Leave_Management_System/tree/main/ui/js)
-- [Images](https://mohanvamsi06/Leave_Management_System/tree/main/ui/images)
-- [CSS](https://mohanvamsi06/Leave_Management_System/tree/main/ui/css)
-- [HTTP Codes](https://mohanvamsi06/Leave_Management_System/tree/main/ui/html)
+- [Images](https://github.com/mohanvamsi06/Leave_Management_System/tree/main/ui/images)
+- [CSS](https://github.com/mohanvamsi06/Leave_Management_System/tree/main/ui/css)
+- [HTTP Codes](https://github.com/mohanvamsi06/Leave_Management_System/tree/main/ui/html)
 
 #### Deliverable 
 - [User Interface](https://amrita-tifac-cyber-blockchain.github.io/20CYS202-User_Interface_Design/Assignments/CB.EN.U4CYS22057/ui/)
