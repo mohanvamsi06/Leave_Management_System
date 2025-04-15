@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
@@ -15,7 +16,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(session({
-    secret: 'session-signing-key',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
@@ -202,8 +203,8 @@ app.get('/sendOTP/:userId', (req, res) => {
     
         if (results.length > 0) {
             const mailid = results[0].email;
-            const send_mail = /*Enter your mail here */;
-            const passwd = /*Enter your app password for mail here */;
+            const send_mail = process.env.MAIL;
+            const passwd = process.env.PASSWD;
             const otp = generateOTP();
     
             const transporter = nodemailer.createTransport({
