@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const nodemailer = require('nodemailer');
@@ -26,10 +26,10 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'user',
-    password: 'user',
-    database: 'sem_project',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 });
 
 app.use(express.static(path.join(__dirname)));

@@ -1,6 +1,9 @@
 CREATE DATABASE IF NOT EXISTS sem_project;
 USE sem_project;
 
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'rootpass';
+FLUSH PRIVILEGES;
+
 CREATE TABLE IF NOT EXISTS details (
     id VARCHAR(20) PRIMARY KEY,
     passwd VARCHAR(255) NOT NULL,
@@ -29,5 +32,5 @@ CREATE TABLE IF NOT EXISTS requests (
 -- Insert 2 sample users
 INSERT INTO details (id, passwd, advisor, email, name, advisor_id)
 VALUES
-('student', 'password', 0, 'mohanavamsi991@gmail.com', 'student', 'advisor'),
-('advisor', 'password', 1, 'mohanavamsi991@gmail.com', 'advisor', NULL);
+('student', 'pass123', 0, 'mohanavamsi991@gmail.com', 'student', 'advisor'),
+('advisor', 'pass123', 1, 'mohanavamsi99@gmail.com', 'advisor', NULL);
