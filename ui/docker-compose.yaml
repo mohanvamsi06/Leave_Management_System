@@ -33,6 +33,7 @@ services:
       DB_NAME: sem_project
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules
     restart: unless-stopped
 
 volumes:
